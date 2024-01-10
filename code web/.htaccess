@@ -1,0 +1,14 @@
+RewriteEngine On
+# API
+RewriteRule ^api/login$ /api/login.php [L]
+RewriteRule ^logout$ /api/logout.php [L]
+RewriteRule ^api/chart-pie$ /api/phantram.php [L]
+RewriteRule ^api/soluong$ /api/soluong.php [L]
+RewriteRule ^api/excel$ /api/excel.php [L]
+
+#url
+RewriteRule ^login$ /pages/login.php [L]
+RewriteRule ^service/danhsach$ /pages/danhsach.php [L]
+RewriteRule ^service/arrived$ /pages/danhsachden.php [L]
+RewriteRule ^service/unarrived$ /pages/danhsachchuaden.php [L]
+RewriteRule ^api/getArrivedData$ /api/getArrivedData.php [L]
