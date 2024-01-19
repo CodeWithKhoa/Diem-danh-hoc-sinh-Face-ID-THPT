@@ -6,7 +6,7 @@ Mã nguồn trong dự án này sử dụng thư viện OpenCV để nhận di�
 
 ## Yêu Cầu Hệ Thống
 
-- [Python](https://www.python.org/): Ngôn ngữ lập trình chính của dự án.
+- [Python](#https://www.python.org/): Ngôn ngữ lập trình chính của dự án.
 - [OpenCV](https://opencv.org/): Thư viện xử lý ảnh và video.
 - [face_recognition](https://github.com/ageitgey/face_recognition): Thư viện nhận diện khuôn mặt.
 - [requests](https://pypi.org/project/requests/): Thư viện để thực hiện HTTP requests.
