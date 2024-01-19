@@ -33,10 +33,10 @@ def findEncodings(images):
 encodeListKnown = findEncodings(images)
 print("encodeing complete")
 
-def thamdu(name):
+def thamgia(name):
     url_to_check = "http://www.google.com"
-    response = requests.get(url_to_check)
     try: 
+        response = requests.get(url_to_check)
         if response.status_code == 200:
             mylist=[]
             # Định dạng ngày
@@ -83,7 +83,7 @@ while True:
 
         if faceDis[matchIndex] < 0.40:
             name = classNames[matchIndex].upper()
-            thamdu(name)
+            thamgia(name)
         else:
             name = 'Unknown'
         # print(name)
