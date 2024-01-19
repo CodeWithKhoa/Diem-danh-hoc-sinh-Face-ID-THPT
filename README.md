@@ -1,24 +1,24 @@
-# Hướng Dẫn Cài Đặt và Sử Dụng OpenCV để Nhận Diện Khuôn Mặt và Ghi Dữ Liệu
+# Installation and Usage Guide for OpenCV Face Detection and Data Logging
 
-## Mô tả dự án
+## Project Description
 
-Mã nguồn trong dự án này sử dụng thư viện OpenCV để nhận diện khuôn mặt và ghi dữ liệu học sinh vào website, giúp quản lý học sinh một cách thuận tiện.
+The source code in this project uses the OpenCV library to perform face detection and log student data to a website, facilitating convenient student management.
 
-## Yêu Cầu Hệ Thống
+## System Requirements
 
-- [Python](#python): Ngôn ngữ lập trình chính của dự án.
-- [OpenCV](https://opencv.org/): Thư viện xử lý ảnh và video.
-- [face_recognition](https://github.com/ageitgey/face_recognition): Thư viện nhận diện khuôn mặt.
-- [requests](https://pypi.org/project/requests/): Thư viện để thực hiện HTTP requests.
-- [Visual Studio Community Edition](https://visualstudio.microsoft.com/visual-cpp-build-tools/): Cần thiết cho việc cài đặt `face_recognition`.
+- [Python](https://www.python.org/): The primary programming language of the project.
+- [OpenCV](https://opencv.org/): A library for image and video processing.
+- [face_recognition](https://github.com/ageitgey/face_recognition): A library for face detection.
+- [requests](https://pypi.org/project/requests/): A library for making HTTP requests.
+- [Visual Studio Community Edition](https://visualstudio.microsoft.com/visual-cpp-build-tools/): Required for installing `face_recognition`.
 
-## Cài Đặt
+## Installation
 
-1. **Cài Đặt Python:**
-   - [Tải Python](https://www.python.org/downloads/) và cài đặt theo hướng dẫn.
+1. **Install Python:**
+   - [Download Python](https://www.python.org/downloads/) and follow the instructions to install.
 
-2. **Cài Đặt Thư Viện:**
-   - Mở terminal hoặc command prompt và chạy lệnh sau để cài đặt các thư viện cần thiết:
+2. **Install Libraries:**
+   - Open a terminal or command prompt and run the following commands to install the necessary libraries:
      ```bash
      pip install opencv-python numpy requests
      pip install cmake
@@ -26,31 +26,46 @@ Mã nguồn trong dự án này sử dụng thư viện OpenCV để nhận di�
      pip install face_recognition
      ```
 
-   - Lưu ý: Nếu bạn gặp vấn đề về Visual Studio Compiler, chắc chắn đã cài đặt Visual Studio và CMake đúng cách.
+   - Note: If you encounter issues with the Visual Studio Compiler, make sure Visual Studio and CMake are installed correctly.
 
-3. **Chuẩn Bị Thư Mục `picture`:**
-   - Tạo một thư mục có tên là `picture` trong cùng thư mục với file `nhandien.py`.
-   - Đặt các ảnh nhận diện trong thư mục `picture` theo định dạng: `mã học sinh-tên học sinh.jpg`.
+3. **Prepare the `picture` Folder:**
+   - Create a folder named `picture` in the same directory as the `nhandien.py` file.
+   - Place the face recognition images in the `picture` folder with the format: `student_id-student_name.jpg`.
 
-## Chạy Mã Nguồn
+## Running the Source Code
 
-1. **Mở Terminal hoặc Command Prompt:**
-   - Mở một terminal hoặc command prompt để chạy mã nguồn.
+To run the source code and initiate face detection, follow these steps:
 
-2. **Chuyển đến Thư Mục Chứa Mã Nguồn:**
-   - Sử dụng lệnh `cd` để chuyển đến thư mục chứa file `nhandien.py`.
+1. **Open Terminal or Command Prompt:**
+   - Open a terminal or command prompt on your computer.
 
-3. **Chạy Mã Nguồn:**
-   - Sử dụng lệnh sau để chạy mã nguồn:
+2. **Navigate to the Source Code Folder:**
+   - Use the `cd` command to navigate to the folder containing the `nhandien.py` file. For example:
+     ```bash
+     cd path_to_nhandien.py_folder
+     ```
+
+3. **Run the Source Code:**
+   - Use the following command to start the application:
      ```bash
      python nhandien.py
      ```
 
-   - Ứng dụng sẽ sử dụng webcam để thực hiện nhận diện khuôn mặt và ghi dữ liệu vào website.
+   - The application will connect and use the webcam to perform face detection and log data to the website.
 
-4. **Thoát Ứng Dụng:**
-   - Nhấn phím `q` để thoát ứng dụng khi bạn đã kết thúc.
+4. **Exit the Application:**
+   - When you finish using the application, press the `q` key to close it.
 
-Lưu ý rằng cần có webcam kết nối và được phép truy cập để thực hiện nhận diện khuôn mặt. Kiểm tra các thông báo trong terminal để xem có lỗi hay không và báo cáo lại nếu cần thiết.
+Please note that a connected webcam with permission is required to perform face detection. Check the messages in the terminal for any errors and report back if necessary.
 
-Nếu có bất kỳ vấn đề nào, hãy liên hệ qua [khoa31122006@gmail.com](mailto:khoa31122006@gmail.com) để được hỗ trợ.
+## Contact
+
+If you encounter any issues or need assistance, please contact via email:
+
+- Email: [khoa31122006@gmail.com](mailto:khoa31122006@gmail.com)
+
+You can also connect with me on Facebook:
+
+- Facebook: [Tran Dang Khoa](https://www.facebook.com/100026315003067)
+
+We will try to provide support as soon as possible.
