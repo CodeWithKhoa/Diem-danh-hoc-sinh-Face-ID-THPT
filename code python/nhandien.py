@@ -1,5 +1,6 @@
 import cv2  # Thư viện OpenCV, sử dụng để xử lý hình ảnh và video
 import numpy as np  # Thư viện NumPy, sử dụng để làm việc với mảng và ma trận
+import csv # Thư viện file excel
 import face_recognition  # Thư viện face_recognition, hỗ trợ nhận diện khuôn mặt
 import os  # Thư viện hệ điều hành, sử dụng để thao tác với hệ thống tệp tin
 import requests  # Thư viện để gửi HTTP requests
@@ -59,7 +60,28 @@ def thamgia(name):
         else:
             print("Lỗi Hệ Thống Vui Lòng Báo Admin")
     except requests.ConnectionError:
-        print("Không có Internet.")
+        # get thông tin file
+        ma = name.split("-")[0]
+        hvt = name.split("-")[1]
+        # Mở file txt và đọc nội dung
+        date = now.strftime("%Y-%m-%d")
+        file_path = f"thamgia_{date}.csv"
+        try:
+            # Thử mở file nếu tồn tại
+            with open(file_path, mode='r+') as file:
+                content = file.read()
+                # Kiểm tra xem ma có trong content không
+                if ma not in content:
+                    print(f"Không có kết nối Internet. Lưu thông tin vào file {file_path}.")
+                    date = now.strftime("%H:%M:%S")
+                    file.write(f"{ma};{hvt};{date}\n")
+        except FileNotFoundError:
+            # Nếu không tồn tại, tạo mới file
+            with open(file_path, mode='a') as file:
+                print(f"Không có kết nối Internet. Lưu thông tin vào file {file_path}.")
+                date = now.strftime("%H:%M:%S")
+                file.write(f"Ma hoc sinh; Ho va ten; Thoi gian\n")
+                file.write(f"{ma};{hvt};{date}\n")
 
 # Khởi động webcam, mã hóa hình ảnh từ webcam
 cap = cv2.VideoCapture(0)  # Nếu có 1 webcam, đặt giá trị là 0
